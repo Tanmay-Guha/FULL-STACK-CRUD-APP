@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(270deg, #1e3c72, #2a5298, #1e3c72);
+  background-size: 600% 600%;
+  animation: gradientShift 20s ease infinite;
+  color: white;
+  overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 20px;
+  color: #ffffff;
+  text-shadow: 0 0 8px #000000;
+}
+
+input {
+  padding: 12px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 220px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffe1;
+}
+
+button {
+  padding: 12px 18px;
+  margin: 10px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0097a7;
+  transform: scale(1.05);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+li:hover {
+  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.task-text {
+  flex: 1;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.task-text:hover {
+  transform: scale(1.05);
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+.done .task-text {
+  text-decoration: line-through;
+  color: #bdbdbd;
+  opacity: 0.8;
+  text-shadow: none;
+}
